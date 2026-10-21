@@ -1,4 +1,4 @@
-# Backpropagation with Weight Decay
+# Backpropagation Applications
 
 ## Project Structure
 
@@ -7,12 +7,11 @@
 
 ## Learning Summary
 
-Throught the presented document I learned about the fundamental process by which a neural network learns. Forward propagation generates a prediction from the input data, while backpropagation calculates the error gradient used to adjust the network's weights. The learning rate determines the size of each update.
+The document introduced forward propagation, backpropagation, learning rates, and methods for measuring training error. This project contains two applications that demonstrate different backpropagation approaches.
 
-Weight decay was selected as the regularization method because it penalizes excessively large weights during training. This encourages a simpler model, reduces the risk of overfitting, and can improve the model's performance on previously unseen data.
+## Applications
 
-## Cross-Entropy Extension
+- **Regularized backpropagation:** Uses mean squared error with weight decay. Weight decay penalizes large weights, which helps reduce overfitting and encourages a simpler model.
+- **Cross-entropy backpropagation:** Uses softmax output probabilities and cross-entropy error for the three-class classification problem. The output error signal is calculated directly from the target and predicted probabilities.
 
-The cross-entropy implementation uses softmax output probabilities for the three-class classification problem. For a one-hot target vector, the derivative of the cross-entropy loss combined with softmax simplifies to the target probability minus the predicted probability. This produces a direct output error signal and avoids multiplying by the additional softmax derivative used with mean squared error.
-
-The implementation is provided in `src/BackPropProgram for CS345 IS 1_Encabo_CrossEntropy.cs`, with its compiled executable in `bin/BackPropProgram-cross-entropy.exe`.
+The source files are in `src`, and the compiled applications are in `bin`.
